@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'Mattone';
+  src: url('../fontes/Mattone-Regular.otf') format('opentype');
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0D0D0D;
+  color: #EAEAEA;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+/* --- header --- */
+.tit {
+  background-color: #000000;
+  padding: 32px 16px;
+  border-bottom: 2px solid #B80015;
+  text-align: center;
+}
+
+.titulo {
+  font-family: 'Mattone', serif;
+  font-size: 135px;
+  font-weight: bold;
+  background-image: url("../img/peito.jpg");
+  background-size: 700px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+}
+
+.sub img {
+  max-width: 550px;
+  height: auto;
+}
+
+/* --- navBar --- */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333333;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.navbar ul li a {
+  color: #EAEAEA;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #00BFFF;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.navbar ul li a:hover {
+  color: #00BFFF;
+}
+.navbar ul li a:hover::after {
+  transform: scaleX(1);
+}
+.New ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #00BFFF;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+.New ul li a:hover {
+  color: #00BFFF;
+}
+/* --- conteudo principal --- */
+
+.biografia-img{
+  padding-top: 20px;
+}
+
+.textointeiro {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* --- footer --- */
+.rodape {
+  background-color: #000000;
+  color: #EAEAEA;
+  padding: 32px 16px;
+  text-align: center;
+  border-top: 2px solid #B80015;
+  margin-top: 40px;
+}
+
+.logos-collab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.logos-collab img {
+  height: 50px;
+  width: auto;
+}
+
+.collab-titulo {
+  font-family: 'Montserrat', sans-serif;
+  color: #EAEAEA;
+}
+
+.collab-titulo span {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.direitos {
+  font-size: 14px;
+  color: #888888;
+}
+
+img {
+  text-align: center;
+}
+
+
+
+/* --- conteudo dos textos --- */
+
+.biografia-conteudo,
+.tecnologia-conteudo,
+.jarvis-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+
+.biografia-img,
+.tecnologia-img,
+.jarvis-img {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.biografia-img img,
+.tecnologia-img img,
+.jarvis-img img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+
+.biografia-texto,
+.tecnologia-texto,
+.jarvis-texto {
+  flex: 2 1 500px;
+}
+
+
+.biografia-texto h2,
+.tecnologia-texto h2,
+.jarvis-texto h2 {
+  color: #B80015;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+
+.biografia-texto p,
+.tecnologia-texto p,
+.jarvis-texto p {
+  color: #ccc;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
