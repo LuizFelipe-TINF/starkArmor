@@ -149,7 +149,7 @@
     margin-bottom: 12px;
   }
   
-  /* Considerações Finais */
+  /* descriçao final */
   .desc-f {
     max-width: 1000px;
     margin: 60px auto;
@@ -249,4 +249,14 @@
     
     
   }
- 
+ .video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.15);
+  border-radius: 20px;
+  width: fit-content;
+  background-color: #000;
+  padding: 10px;
+}
