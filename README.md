@@ -25,3 +25,9 @@ Tony é um cliente que não tem restrições com relação ao seu custo: “cobr
 
 > 💡 Algumas cores utilizam `background-image` e efeitos como `background-clip: text;` para aplicar imagens nos títulos, como o efeito com a imagem `peito.jpg`.
 
+## Mudanças do Wireframe para a forma final:
+
+. Não foi mantido o logo na barra de navegação
+. Não colocamos imagem de uma "coleção" de armaduras no início da página
+. Fizemos uma página para o carrinho, ao invés dele abrir em um painel lateral
+. Não colocamos o sininho, de notificação
