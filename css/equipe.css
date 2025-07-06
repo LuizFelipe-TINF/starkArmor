@@ -520,7 +520,7 @@ h2 {
   width: 100%;
   max-width: 350px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.5);
 }
 
 
@@ -547,3 +547,27 @@ h2 {
   margin-bottom: 16px;
   line-height: 1.6;
 }
+
+
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #0D0D0D;
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #00BFFF;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #00BFFF, 0 0 20px #00BFFF;
+}
+
