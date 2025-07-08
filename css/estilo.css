@@ -3,6 +3,63 @@
   src: url('../fontes/Mattone-Regular.otf') format('opentype');
   font-weight: normal;
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+    margin: 0;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    padding: 5px 10px;
+    height: auto;
+    background-color: #111; /* opcional: pode escurecer no mobile */
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  nav ul li a {
+    font-size: 14px; /* reduz o tamanho dos links */
+    padding: 6px 10px; /* reduz o espaçamento interno */
+  }
+
+  .section-container,
+  .produto,
+  .novidade {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .produto img,
+  .novidade img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  
+}
 
 * {
   margin: 0;
