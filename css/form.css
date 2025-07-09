@@ -545,8 +545,8 @@ img {
 }
 
 .formulario-compra {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* organiza verticalmente */
+  flex-direction: column; /* organiza verticalmente */
   gap: 15px;
   background-color: #111;
   padding: 25px;
@@ -571,7 +571,7 @@ img {
   color: #fff;
   font-size: 14px;
 }
-
+ /* clicar no campo dá um destaque para ele */
 .formulario-compra input:focus,
 .formulario-compra select:focus {
   outline: none; 
@@ -582,19 +582,20 @@ img {
 .formulario-compra select {
   background-color: #222;
 }
-
+ /* quando preenchido corretamente, ganha uma borda azul */
 .formulario-compra input:valid,
 .formulario-compra select:valid {
   border: 1px solid #00bfff; 
   box-shadow: 0 0 5px rgba(0, 191, 255, 0.5); 
 }
 
-
+ /* preenchido incorretamente, uma borda vermelha */
 .formulario-compra input:invalid:not(:placeholder-shown),
 .formulario-compra select:invalid:not([value=""]):not(:focus) {
   border: 1px solid #ff4500; 
   box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
 }
+ /* muda a cor do texto de dica para que nao fique confuso com a cor do fundo */
 .formulario-compra input::placeholder {
   color: #aaa;
 }
