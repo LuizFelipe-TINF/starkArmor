@@ -4,7 +4,7 @@
   font-weight: normal;
 }
 
-/* Regra que move o painel para dentro da tela quando o input radio é checado */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -153,7 +153,7 @@ body {
   position: relative;
   transition: color 0.3s ease;
 }
-
+/* --- after cria uma linha falsa --- */
 .navbar ul li a::after {
   content: '';
   position: absolute;
@@ -162,7 +162,7 @@ body {
   background: #00BFFF;
   bottom: 0;
   left: 0;
-  transform: scaleX(0);
+  transform: scaleX(0); /* --- faz essa linha ficar escondida inicialmente--- */
   transform-origin: center;
   transition: transform 0.4s ease;
 }
@@ -171,7 +171,7 @@ body {
   color: #00BFFF;
 }
 .navbar ul li a:hover::after {
-  transform: scaleX(1);
+  transform: scaleX(1); /* --- faz a linha crescer ao passar o mouse --- */
 }
 .New ul li a::after {
   content: '';
@@ -219,8 +219,8 @@ body {
 /* --- cards da armadura --- */
 .lista-personagens {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* --- auto - fit: adapta a quantidade de colunas conforme o tamanho da tela.  garante que cada card tenha no mínimo 280px e se expanda até ocupar o espaço disponível.--- */
+  gap: 30px; /* --- separa os cards. --- */
   list-style: none;
   padding: 0;
 }
@@ -232,7 +232,7 @@ body {
   padding: 20px;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* --- empilhar os elementos. --- */
   justify-content: space-between;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -241,6 +241,7 @@ body {
   animation-delay: 0s;
 }
 
+ /* --- bordas douradas, setas dentro do card --- */
 .card-armadura::before,
 .card-armadura::after {
   content: '';
@@ -252,7 +253,7 @@ body {
   opacity: 0;
   transition: all 0.4s ease;
 }
-
+/* --- cantos dourados no card --- */
 .card-armadura::before {
   top: 10px;
   left: 10px;
@@ -266,11 +267,11 @@ body {
 }
 
 .card-armadura:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px); /* --- card sobe --- */
   box-shadow: 0 0 25px rgba(184, 0, 21, 0.4);
   border-color: #B80015;
 }
-
+ /* --- dourado --- */
 .card-armadura:hover::before,
 .card-armadura:hover::after {
   opacity: 1;
@@ -287,7 +288,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
+/* --- zoom na imagem com hover --- */
 .card-armadura:hover img {
   transform: scale(1.05);
 }
@@ -324,7 +325,7 @@ body {
   transition: all 0.3s ease;
   text-transform: uppercase;
 }
-
+/* --- faz ficar branco com brilho dourado ao passar o mouse --- */
 .botao-comprar:hover {
   background-color: #FFFFFF;
   color: #000000;
@@ -392,12 +393,12 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0 36px;
-  perspective: 2500px;
+  perspective: 2500px; /* ===== ativa o efeito 3d no card ===== */
   cursor: pointer;
   border-radius: 30px;
   margin: auto;
 }
-
+/* --- camada que gira quando o mouse passa por cima, rotações --- */
 .wrapper {
   transition: all 0.5s;
   position: absolute;
@@ -417,10 +418,10 @@ img {
 }
 
 .card:hover .wrapper {
-  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0); /* --- rotate cria a ilusão 3D inclinada --- */
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75); /* --- sombra para aumentar a profundidade--- */
 }
-
+/* --- efeitos de luz e sombra 3d--- */
 .wrapper::before,
 .wrapper::after {
   content: "";
@@ -432,13 +433,13 @@ img {
   position: absolute;
   left: 0;
 }
-
+/* --- efeitos de iluminação ao passar o mouse--- */
 .wrapper::before {
   top: 0;
   height: 100%;
   background-image: linear-gradient(to top, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgba(12, 13, 19) 97%);
 }
-
+/* --- efeitos de iluminação ao passar o mouse--- */
 .wrapper::after {
   bottom: 0;
   opacity: 1;
@@ -453,22 +454,22 @@ img {
 .card:hover .wrapper::after {
   height: 120px;
 }
-
+/* --- ao passar por cima faz o preço subir e se aproximar --- */
 .logo {
   width: 100%;
   transition: transform 0.5s;
   position: absolute;
   bottom: 10px;
 }
-
+/* --- ao passar por cima faz o preço subir e se aproximar --- */
 .card:hover .logo {
   transform: translate3d(0%, -50px, 100px);
 }
-
+/* --- .cover-image deixa a imagem de fundo translúcida, assim o .character, 3d, ganha mais destaque --- */
 .card:hover .cover-image {
   opacity: 0.3;
 }
-
+/* --- aparece e se projeta para frente com efeito 3D --- */
 .character {
   width: 100%;
   opacity: 0;
@@ -477,7 +478,7 @@ img {
   position: absolute;
   z-index: -1;
 }
-
+/* --- aparece e se projeta para frente com efeito 3D --- */
 .card:hover .character {
   opacity: 1;
   transform: translate3d(0%, -20%, 670px);
@@ -493,14 +494,14 @@ img {
 .painel-lateral {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -100%; /* começa fora da tela, efeito de entrada */
   width: 350px;
   height: 100vh;
   background-color: #111;
   color: white;
   padding: 30px 20px;
   box-shadow: -4px 0 10px rgba(0, 191, 255, 0.5);
-  z-index: 9999;
+  z-index: 9999; /* garante que o painel ficará por cima de todo conteúdo da página */
   transition: right 0.4s ease-in-out;
   overflow-y: auto;
 }
