@@ -590,8 +590,8 @@ img {
 }
 
  /* preenchido incorretamente, uma borda vermelha */
-.formulario-compra input:invalid:not(:placeholder-shown),
-.formulario-compra select:invalid:not([value=""]):not(:focus) {
+.formulario-compra input:invalid:not(:placeholder-shown),  /* evita aplicar o estilo no momento em que o campo ainda está vazio */
+.formulario-compra select:invalid:not([value=""]) /* garante que o estilo de erro só apareça se o usuário não escolher uma opção válida. */ :not(:focus) /* evita que o campo fique com borda de erro enquanto o usuário ainda está escolhendo ou digitando */  {
   border: 1px solid #ff4500; 
   box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
 }
