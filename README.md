@@ -31,3 +31,7 @@ Tony é um cliente que não tem restrições com relação ao seu custo: “cobr
 . Não colocamos imagem de uma "coleção" de armaduras no início da página
 . Fizemos uma página para o carrinho, ao invés dele abrir em um painel lateral
 . Não colocamos o sininho, de notificação
+
+Comentários sobre a equipe:
+
+TIVEMOS ALGUMAS COMPLICAÇÕES COM O REPOSITÓRIO E CRIAMOS ESSE NOVO COMO O REPOSITÓRIO FINAL, POR ISSO SO HÁ DOIS COLABORADORES, OS OUTROS MEXERAM ATIVAMENTE DURANTE AS AULAS, ASSIM, MEXIAM NA CONTA DE ALGUÉM QUE JÁ ESTAVA LOGADO...
